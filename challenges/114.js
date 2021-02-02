@@ -35,8 +35,18 @@
 // // [1,2,3,4,5,6,7]
 // ```
 
-function flatten(array){
-    // your code here
+//given problem doesn't indicate sorting but examples do...
+// must use .reduce method as well as .concat method
+
+function flatten(array) {
+    // use .reduce to check if array is array of arrays 
+    array.reduce(
+        function(a, b) {
+            // return single array of all elements
+            return a.concat(b);
+        });
 }
 
-module.exports = flatten;
+//console.log(flatten([[1,2],[3, [4, 5]], [6], 7]))
+
+// module.exports = flatten;
